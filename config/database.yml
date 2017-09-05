@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: security_services
+  database: ryzil_development
   encoding: utf8
   adapter: postgresql
   host: localhost
@@ -29,8 +29,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  host: 127.9.98.2
-  adapter: mysql2
-  database: ruby
-  username: adminEDRB148
-  password: nD27hvdRi2lH
+  <<: *default
+  database: db/production.sqlite3  
+

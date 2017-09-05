@@ -8,7 +8,7 @@
 											 
 											 <a class="navbar-brand" href="" id= "hlogo">
 											 <div class="logo">	<img src="/assets/logo.png" class="preload-gif" id="logo">
-													<span style="margin-left:5%;">NEW</span><span class="font-color">LION HOUSE KEEPING</span></div>
+													<span style="margin-left:5%;">RYZIL</span><span class="font-color">PHARMACEUTICAL</span></div>
 												</a>
 	
 								</div>
@@ -19,17 +19,17 @@
 		<a href="/"  id="home" class="<%='active' if params[:controller] == "home"%>">Home</a>
 	</li>
 	<li>
-		<a href="/about" id="about" class="<%='active' if params[:controller] == "about"%>">Who we are?</a>
+		<a href="/" id="about" class="<%='active' if params[:controller] == "about"%>">Who we are?</a>
 	</li>
 	<li>
-		<a href="javascript:void(0)" id="services" class="<%='active' if params[:controller] == "services"%>">Services</a>
-		<ul class="dropDown sub-menu">
-			<li><a href="/services/house-keeping" id="housekeeping">House Keeping</a></li>
-			<li><a href="/services/security-guard" id="securityguard">Security Guard</a></li>	
-			<li><a href="/services/man-power" id="manpower">Man Power</a></li>		
-		</ul><!-- end of dropdown -->
+		<a href="javascript:void(0)" id="services" class="<%='active' if params[:controller] == "services"%>">Services & Products</a>
+		<!-- <ul class="dropDown sub-menu">
+			<li><a href="" id="housekeeping">House Keeping</a></li>
+			<li><a href="" id="securityguard">Security Guard</a></li>	
+			<li><a href="" id="manpower">Man Power</a></li>		
+		</ul><!-- end of dropdown --> 
 	</li>
-	<li><a href="/contact" id="contact" class="<%='active' if params[:controller] == "contact"%>">Contact</a></li>
+	<li><a href="/" id="contact" class="<%='active' if params[:controller] == "contact"%>">Contact</a></li>
 	
 	
 						</ul><!-- end of nav tabs -->
@@ -49,19 +49,19 @@
   $("#home").click(function(){
     location.href = "/"
   })
-  $("#about").click(function(){
-    location.href = "/about"
-  })
-  $("#housekeeping").click(function(){
-    location.href = "/services/house-keeping"
-  })
-  $("#securityguard").click(function(){
-    location.href = "/services/security-guard"
-  })
-  $("#manpower").click(function(){
-    location.href = "/services/man-power"
-  })
-  $("#contact").click(function(){
-    location.href = "/services/contact"
-  })
+  // $("#about").click(function(){
+  //   location.href = "/about"
+  // })
+  // $("#housekeeping").click(function(){
+  //   location.href = "/services/house-keeping"
+  // })
+  // $("#securityguard").click(function(){
+  //   location.href = "/services/security-guard"
+  // })
+  // $("#manpower").click(function(){
+  //   location.href = "/services/man-power"
+  // })
+  // $("#contact").click(function(){
+  //   location.href = "/services/contact"
+  // })
 </script>

@@ -143,9 +143,8 @@ h5{
 
 .header{
 	background: transparent;
-	position:absolute;
 	width:100%;
-	height: 45px;
+	height: 15px;
 	top:0px;
 	left:0px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -164,7 +163,7 @@ h5{
 	position:fixed;
 }
 .headerStyle{background:#636a71;position:relative;}
-.header .scrollHeaderWrapper { height: 45px;}
+.header .scrollHeaderWrapper { height: 75px;}
 .header + .offset {display: none;}
 .header.fixedHeader{
 	position: fixed;
@@ -186,7 +185,7 @@ h5{
 .logo a{color:#666666;}
 .navbar-brand{
   font-size: 26px;
-  line-height: 28px;
+  line-height: 46px;
   text-transform: uppercase;
   color: #fff;
   padding: 0px;
@@ -195,19 +194,19 @@ h5{
 }
 .header.fixedHeader .navbar-brand{
 	font-size: 26px;
-	line-height: 10px;
+	line-height: 28px;
 	padding-top: 24px;
 }
 #logo{
-	width:50px;height:50px;float:left;margin-top:-3%;margin-left:-5%;
+	width:107px;height:63px;float:left;margin-top:-3%;margin-left:-11%;
 }
 
 .header.fixedHeader #logo{
-	width:50px;height:50px;float:left;margin-top:-6%;
+	width:107px;height:65px;float:left;margin-top:-5%;
 }
-.header.fixedHeader .mainNav .navTabs li a{padding:17px 22px 23px;}
+.header.fixedHeader .mainNav .navTabs li a{padding:32px 22px 23px;}
 .header.fixedHeader .mainNav .navTabs li .dropDown li a{padding:15px;}
-.header.fixedHeader{height: 60px;}
+.header.fixedHeader{height: 75px;}
 .header.fixedHeader .mainNav .navTabs li .dropDown{top: 60px;}
 header.fixedHeader .mainNav .navTabs li .dropDown .menu{top: 0px;}
 
@@ -244,7 +243,7 @@ header.fixedHeader .mainNav .navTabs li .dropDown .menu{top: 0px;}
 	font-size: 14px;
 	font-weight:normal;
 	font-family:'oswaldlight';
-	padding: 16px 22px 23px;
+	padding: 31px 22px 23px;
 	text-transform:uppercase;
 }
 .mainNav .navTabs > li .active {color: #000; border-bottom:2px solid #4cc1d3;}
@@ -4028,7 +4027,7 @@ input[type="submit"]:hover > i{
 	font-size:250%;color:#000;font-weight:bold;
 }
 .about-text{
-	width:60%;height:auto;float:left;font-weight:bold;margin-top:2%;
+	width:55%;height:auto;float:left;font-weight:bold;margin-top:2%;
 }
 .about-text p{
 	margin-top:1%;
@@ -4053,7 +4052,7 @@ input[type="submit"]:hover > i{
 	color:#7e8082;
 }
 .testimonial-title{
-	position:absolute;margin-left:43%;margin-top:-6%;color:#000;
+	position:absolute;margin-left:43%;margin-top:-6%;color:#fff;
 }
 .testimonials-description{
 	color:#fff;position:absolute;margin-left:23%;margin-top:-3%;color:#7e8082;
@@ -4228,3 +4227,4 @@ label > input:focus, label > select:focus {
 .formSubmit{width:20%;height:40px;margin-left:7%;background-color:#666666;margin-bottom:5%;color:#fff;font-family:oswald;font-size:15px;}
 .jobApplyBtn{width:15%;height:40px;margin-left:7%;background-color:#666666;margin-bottom:5%;color:#fff;font-family:oswald;font-size:15px;}
 .ddby{margin-left:124px;}
+#ndtestimonials{margin-bottom: 10px;}
