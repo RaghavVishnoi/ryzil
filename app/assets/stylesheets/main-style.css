@@ -204,7 +204,7 @@ h5{
 .header.fixedHeader #logo{
 	width:108px;height:90px;float:left;margin-top:-5%;margin-left:-22%;
 }
-.header.fixedHeader .mainNav .navTabs li a{padding:32px 22px 23px;}
+.header.fixedHeader .mainNav .navTabs li a{padding:32px 12px 23px;}
 .header.fixedHeader .mainNav .navTabs li .dropDown li a{padding:15px;}
 .header.fixedHeader{height: 97px;}
 .header.fixedHeader .mainNav .navTabs li .dropDown{top: 60px;}
@@ -243,7 +243,7 @@ header.fixedHeader .mainNav .navTabs li .dropDown .menu{top: 0px;}
 	font-size: 14px;
 	font-weight:normal;
 	font-family:'oswaldlight';
-	padding: 37px 22px 23px;
+	padding: 37px 12px 23px;
 	text-transform:uppercase;
 }
 .mainNav .navTabs > li .active {color: #000; border-bottom:2px solid #4cc1d3;}

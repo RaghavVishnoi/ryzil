@@ -25,54 +25,18 @@
 							<div class="ft_center">
 								<h3 class="fthead">Services/Products</h3>
 								<ul class="nadea_recentposts">
+									<%cover_products = Product.cover_products%>
+									<%cover_products.each_with_index do |product,index|%>
 									<li> 
 										
 										<div class="pull-right text">
-											<h5 ><a href="#" title="Lorem Ipsum" style="color:#fff;text-decoration:blink;">Ryzil-sp-tablet</a></h5>
+											<h5 ><a href="#" title="Lorem Ipsum" style="color:#fff;text-decoration:blink;"><%=product.name%></a></h5>
 
 
 										</div>
-										<div class="ftmin-height"></div>
+										<div class="ftmin-height <%='more-products-link' if product.name == cover_products.last.name%>"><%='more..' if product.name == cover_products.last.name%></div>
 									</li>
-									<li> 
-										
-										<div class="pull-right text">
-											<h5 ><a href="#" title="Lorem Ipsum" style="color:#fff;text-decoration:blink;">Rizoxin-oz-tablet</a></h5>
-
-
-										</div>
-										<div class="ftmin-height"></div>
-									</li>
-									<li> 
-										
-										<div class="pull-right text">
-											<h5 ><a href="#" title="Lorem Ipsum" style="color:#fff;text-decoration:blink;">Monti-rise-i tablet</a></h5>
-
-
-										</div>
-										<div class="ftmin-height"></div>
-									</li>
-									<li> 
-										
-										<div class="pull-right text">
-											<h5 ><a href="#" title="Lorem Ipsum" style="color:#fff;text-decoration:blink;">Panta-rise-dsr capsules</a></h5>
-										</div>
-										<div class="ftmin-height"></div>
-									</li>
-									<li> 
-										
-										<div class="pull-right text">
-											<h5 ><a href="#" title="Lorem Ipsum" style="color:#fff;text-decoration:blink;">Caferise 1gm injection</a></h5>
-										</div>
-										<div class="ftmin-height"></div>
-									</li>
-									<li> 
-										
-										<div class="pull-right text">
-											<h5 ><a href="#" title="Lorem Ipsum" style="color:#fff;text-decoration:blink;">Riseclav-cv-625 tablet</a></h5>
-										</div>
-										<div class="ftmin-height more-products-link">more ..</div>
-									</li>
+									<%end%>
  								</ul>
 							</div><!-- ft center end -->
 						</div><!-- 6Col end-->

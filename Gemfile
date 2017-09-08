@@ -33,6 +33,10 @@ gem 'carrierwave'
 
  gem 'will_paginate' 
 
+ gem 'rails_admin', '~> 1.2'
+
+ gem 'devise_can'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

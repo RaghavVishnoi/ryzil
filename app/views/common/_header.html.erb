@@ -14,26 +14,28 @@
 								</div>
 
 <nav class="mainMenu mainNav pull-right" id="mainNav">
-<ul class="navTabs">
-	<li>
-		<a href="/"  id="home" class="<%='active' if params[:controller] == "home"%>">Home</a>
-	</li>
-	<li>
-		<a href="/" id="about" class="<%='active' if params[:controller] == "about"%>">Who we are?</a>
-	</li>
-	<li>
-		<a href="javascript:void(0)" id="services" class="<%='active' if params[:controller] == "services"%>">Services & Products</a>
-		<!-- <ul class="dropDown sub-menu">
-			<li><a href="" id="housekeeping">House Keeping</a></li>
-			<li><a href="" id="securityguard">Security Guard</a></li>	
-			<li><a href="" id="manpower">Man Power</a></li>		
-		</ul><!-- end of dropdown --> 
-	</li>
-	<li><a href="/" id="contact" class="<%='active' if params[:controller] == "contact"%>">Contact</a></li>
-	
-	
-						</ul><!-- end of nav tabs -->
-					</nav><!-- end of main nav -->
+	<ul class="navTabs">
+		<li>
+			<a href="/"  id="home" class="<%='active' if params[:controller] == "home"%>">Home</a>
+		</li>
+		<li>
+			<a href="/about" id="about" class="<%='active' if params[:controller] == "about"%>">Who we are?</a>
+		</li>
+		<li>
+			<a href="javascript:void(0)" id="services" class="<%='active' if params[:controller] == "services"%>">Services & Products</a>
+			<!-- <ul class="dropDown sub-menu">
+				<li><a href="" id="housekeeping">House Keeping</a></li>
+				<li><a href="" id="securityguard">Security Guard</a></li>	
+				<li><a href="" id="manpower">Man Power</a></li>		
+			</ul><!-- end of dropdown --> 
+		</li>
+		<li><a href="/" id="contact" class="<%='active' if params[:controller] == "contact"%>">Contact</a></li>
+		<li>
+			<a href="/login" id="login-admin" class="<%='active' if params[:controller] == "login"%>">Login</a>
+		</li>
+		
+	</ul><!-- end of nav tabs -->
+</nav><!-- end of main nav -->
 		  
 					<a href="" class="generalLink" id="responsiveMainNavToggler"><i class="fa fa-bars"></i></a>
 					<div class="clearfix"></div><!-- end of clearfix -->
@@ -49,9 +51,12 @@
   $("#home").click(function(){
     location.href = "/"
   })
-  // $("#about").click(function(){
-  //   location.href = "/about"
-  // })
+  $("#about").click(function(){
+    location.href = "/about"
+  })
+  $("#login-admin").click(function(){
+    location.href = "/login"
+  })
   // $("#housekeeping").click(function(){
   //   location.href = "/services/house-keeping"
   // })
