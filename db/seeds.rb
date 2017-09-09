@@ -5,12 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Role.create!([
-	{name: 'Superadmin'},
-	{name: 'Admin'},
-	{name: 'User'}
-])
-
-User.create!([
-	{email: 'superadmin@skconsultants.in',name: 'superadmin',role_id: 1,status: 'Active',password: '12345'}
-])
