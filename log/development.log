@@ -1072,3 +1072,4 @@ DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please ch
   Rendered /home/raghav/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (77.3ms)
 Started GET "/assets/logo.png" for 127.0.0.1 at 2017-09-09 15:08:24 +0530
 DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/raghav/Desktop/Raghav/rathi_app/app/models/application_record.rb:1)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/raghav/Desktop/Raghav/rathi_app/app/models/application_record.rb:1)

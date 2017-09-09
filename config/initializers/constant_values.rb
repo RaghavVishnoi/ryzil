@@ -1,4 +1,3 @@
-STATUS = ['Active','Inactive']
 SUBJECT = ['Suggestion','Complain','Testimonial','Other']
 STATES = [
  'Andhra Pradesh',
