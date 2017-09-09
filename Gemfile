@@ -29,13 +29,15 @@ gem 'clearance', '~> 1.12', '>= 1.12.1'
 gem 'carrierwave'
 
 #For serialization
-  gem 'active_model_serializers'
+gem 'active_model_serializers'
 
- gem 'will_paginate' 
+gem 'rails_admin', '~> 1.2'
 
- gem 'rails_admin', '~> 1.2'
+gem 'devise_can'
 
- gem 'devise_can'
+gem 'kaminari'
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

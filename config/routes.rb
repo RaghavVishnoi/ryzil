@@ -1,22 +1,40 @@
 Rails.application.routes.draw do
 
-  devise_for :admins
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+    
   root "home#index"
 
   resources :products, only: [:index,:show]
   resources :about, only: [:index]
   resources :contact, only: [:index,:create]
   resources :session, only: [:create]
-  resources :users, only: [:index,:new,:create]
-  resources :values, only: [:index]
-  resources :candidates, only: [:index,:new,:create]
-  resources :current_openings, only: [:index,:new,:create,:edit,:update]
-  resources :jobs, only: [:index]
 
-  get '/login', to: "session#new"
-  post '/users/sign_in', to: 'session#create'
-  get 'users/sign_out', to: 'session#destroy'
+  
+
+    # Routes for admin
+  devise_for :admin, controllers: {  
+      # confirmations: 'users/confirmations',
+      sessions: 'admin/sessions',
+      # unlocks: 'users/unlocks',
+    }, skip: [:sessions]
+
+    ## custom routes for users
+    as :admin do  
+       unauthenticated :admin do
+        root to: 'admin/sessions#new'
+       end
+
+       authenticated :admin do
+        root to: 'admin/sessions#new'
+       end  
+      get 'admin/sign_in' => 'admin/sessions#new', as: :new_admin_session_path_url
+      post 'admin/sign_in' => 'admin/sessions#create', as: :session_path
+      delete 'admin/sign_out', :to => 'admin/sessions#destroy', as: 'logout'
+    end
+
+  
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
  

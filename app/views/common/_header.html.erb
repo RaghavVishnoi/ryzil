@@ -29,9 +29,9 @@
 				<li><a href="" id="manpower">Man Power</a></li>		
 			</ul><!-- end of dropdown --> 
 		</li>
-		<li><a href="/" id="contact" class="<%='active' if params[:controller] == "contact"%>">Contact</a></li>
+		<li><a href="/contact" id="contact" class="<%='active' if params[:controller] == "contact"%>">Contact</a></li>
 		<li>
-			<a href="/login" id="login-admin" class="<%='active' if params[:controller] == "login"%>">Login</a>
+			<a href="/admin/sign_in" id="login-admin" class="<%='active' if params[:controller] == "login"%>">Login</a>
 		</li>
 		
 	</ul><!-- end of nav tabs -->
@@ -54,8 +54,11 @@
   $("#about").click(function(){
     location.href = "/about"
   })
+  $("#contact").click(function(){
+    location.href = "/contact"
+  })
   $("#login-admin").click(function(){
-    location.href = "/login"
+    location.href = "/admin/sign_in"
   })
   // $("#housekeeping").click(function(){
   //   location.href = "/services/house-keeping"
