@@ -1,0 +1,111 @@
+<body id="top" class="ndhome">
+	
+		<!-- PRELOADER-->
+		<%render partial: 'common/loader' %>
+		
+		<!-- END PRELOADER -->
+	
+		<!-- Header Section Start -->
+		<%=render partial: 'common/header'%>
+	<!-- Nadea PageTitle Section Start -->
+		<section id="page-title" class="clear skype-bg" style="margin-top:4.5%;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="page-title">
+							<h1>Products</h1>
+						</div>
+					</div><!-- col 6-->
+					
+				</div><!-- .row end -->
+			</div><!-- .container end -->
+		</section>
+ 
+		<section id="ndblogpage" class="ndblogsincol clear">
+			<div class="container">
+				<div class="blogcol2 page-postsing">
+					<div class="row">
+					<%@products.each_slice(2) do |products|%>
+						<%products.each do |product|%>
+							<div class="col-sm-6">
+								<div class="item animation" data-animation="animation-fade-in-left">
+									<div class="post-content-container">
+										<div class="post-image-container">
+											<a href="#">
+												<img src="<%=product.product_image.url%>"  class="img-responsive" style="width:100%;height:400px;"/>
+											</a>
+										</div>
+										
+										<div class="blogpost-title">
+											<a href="#">
+												<h2><%=product.name%></h2>
+											</a>
+										</div><!-- Blog Title-->
+										
+										<div class="post-info">
+											<div class="post-date">
+												<span class="icon-clock-lp"></span>
+												</span>
+												<hr class="bgfwh2"/>
+											</div>
+										</div><!-- .post-info end -->
+
+										<p>
+											<%=product.description%>
+										</p>
+										<!-- <a href="" id="rec">
+											<button class="service-button">MORE</button>
+									    </a> -->
+										
+									</div><!-- .blog Image and Text Post end -->
+								</div><!--Item 1 -->
+							</div><!--col 6 end -->
+						<%end%>
+					<%end%>	
+					</div><!-- .row end -->
+					
+					
+				</div><!-- row end -->
+
+
+			</div><!-- container end -->
+
+			
+		</section>
+
+
+ 		<div class="ndheight"></div>
+		
+		<!-- ServicesAbout Section Start -->
+		<div class="ndheight"></div>
+		<section class="about section mainSection scrollAnchor lightSection animation" data-animation="animation-fade-in-up" id="about">
+			<div class="sectionWrapper">
+				<div class="container">
+					<div class="row aboutContents">
+						<div class="col-sm-12">
+							
+								<div class="accordionRow toggleRow triggerRow">
+								  
+								  <div class="accordion-content triggerMenu">
+									<p></p>
+								  </div><!-- end of accordian-content -->
+								</div><!-- end of accordian row -->
+							
+							</div>
+						</div><!-- end of about accordian -->
+
+					  
+					  
+					</div><!-- end of about contents -->
+					
+				</div><!-- end of container -->
+			</div><!-- end of section wrapper -->
+		</section><!-- end about section -->
+		<div class="ndheight"></div>
+		<!-- ServicesAbout Section End -->		
+		<%=render partial: 'common/footer' %>
+
+</body>		
+<script type="text/javascript">
+	$("#products").attr("class","active")
+</script>

@@ -22,12 +22,7 @@
 			<a href="/about" id="about" class="<%='active' if params[:controller] == "about"%>">Who we are?</a>
 		</li>
 		<li>
-			<a href="javascript:void(0)" id="services" class="<%='active' if params[:controller] == "services"%>">Services & Products</a>
-			<!-- <ul class="dropDown sub-menu">
-				<li><a href="" id="housekeeping">House Keeping</a></li>
-				<li><a href="" id="securityguard">Security Guard</a></li>	
-				<li><a href="" id="manpower">Man Power</a></li>		
-			</ul><!-- end of dropdown --> 
+			<a href="/products" id="products" class="<%='active' if params[:controller] == "services"%>">Services & Products</a> 
 		</li>
 		<li><a href="/contact" id="contact" class="<%='active' if params[:controller] == "contact"%>">Contact</a></li>
 		<li>
@@ -54,22 +49,13 @@
   $("#about").click(function(){
     location.href = "/about"
   })
+  $("#products").click(function(){
+    location.href = "/products"
+  })
   $("#contact").click(function(){
     location.href = "/contact"
   })
   $("#login-admin").click(function(){
     location.href = "/admin/sign_in"
   })
-  // $("#housekeeping").click(function(){
-  //   location.href = "/services/house-keeping"
-  // })
-  // $("#securityguard").click(function(){
-  //   location.href = "/services/security-guard"
-  // })
-  // $("#manpower").click(function(){
-  //   location.href = "/services/man-power"
-  // })
-  // $("#contact").click(function(){
-  //   location.href = "/services/contact"
-  // })
 </script>
