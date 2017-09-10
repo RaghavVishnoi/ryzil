@@ -26,8 +26,6 @@ gem 'sdoc', '~> 0.4.0'
 
 gem 'clearance', '~> 1.12', '>= 1.12.1'
 
-gem 'carrierwave'
-
 #For serialization
 gem 'active_model_serializers'
 
@@ -36,6 +34,8 @@ gem 'rails_admin', '~> 1.2'
 gem 'devise_can'
 
 gem 'kaminari'
+
+gem 'carrierwave', '~> 1.0'
 
 
 

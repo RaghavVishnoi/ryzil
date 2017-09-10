@@ -233,7 +233,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   byebug
-  carrierwave
+  carrierwave (~> 1.0)
   clearance (~> 1.12, >= 1.12.1)
   coffee-rails (~> 4.1.0)
   devise_can
