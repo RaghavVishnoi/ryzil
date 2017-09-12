@@ -16,7 +16,7 @@ Devise.setup do |config|
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
-
+  
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
 
@@ -52,6 +52,9 @@ Devise.setup do |config|
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [:email]
+
+  config.secret_key = 'f8abbc1ce85be95003a970a499e7361f22b1845abdf821d490e9643fa0a16dc9abab206f103c793622a630789acf6b5fda4a6fffc592c96b01fc09c78ed80604'
+
 
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
