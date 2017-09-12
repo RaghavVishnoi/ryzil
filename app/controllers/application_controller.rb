@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
   respond_to :html, :json
+  after_action :allow_iframe, only: :embed
+
+  def embed
+  end
   
   private
 
@@ -15,6 +19,10 @@ class ApplicationController < ActionController::Base
 
   def render_errors(errors)
     render json: { errors: errors }, status: 422
+  end
+
+  def allow_iframe
+    response.headers.except! 'X-Frame-Options'
   end
 
 protected

@@ -29,12 +29,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  database: root
-  encoding: utf8
-  adapter: postgresql
-  host: localhost
-  min_messages: warning
-  pool: 2
-  timeout: 50000
-  
+  <<: *default
+  database: db/production.sqlite3  
 
