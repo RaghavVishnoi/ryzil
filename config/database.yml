@@ -29,6 +29,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: root
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  database: <%=ENV['POSTGRESQL_DATABASE']%>
+  host: <%=ENV['APPLICATION_DOMAIN']%>
+  username: <%=ENV['POSTGRESQL_USER']%>
+  password: <%=ENV['POSTGRESQL_PASSWORD']%>
 
