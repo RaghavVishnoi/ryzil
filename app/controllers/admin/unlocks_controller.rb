@@ -1,4 +1,5 @@
 class Admin::UnlocksController < Devise::UnlocksController
+  after_action :allow_iframe_requests
   # GET /resource/unlock/new
   # def new
   #   super
@@ -25,4 +26,8 @@ class Admin::UnlocksController < Devise::UnlocksController
   # def after_unlock_path_for(resource)
   #   super(resource)
   # end
+  private
+    def allow_iframe_requests
+      response.headers.delete('X-Frame-Options')
+    end
 end

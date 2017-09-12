@@ -1,4 +1,5 @@
 class Admin::PasswordsController < Devise::PasswordsController
+  after_action :allow_iframe_requests
   # GET /resource/password/new
   # def new
   #   super
@@ -29,4 +30,8 @@ class Admin::PasswordsController < Devise::PasswordsController
   # def after_sending_reset_password_instructions_path_for(resource_name)
   #   super(resource_name)
   # end
+  private
+    def allow_iframe_requests
+      response.headers.delete('X-Frame-Options')
+    end
 end

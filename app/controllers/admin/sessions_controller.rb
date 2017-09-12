@@ -1,6 +1,7 @@
 class Admin::SessionsController < Devise::SessionsController
 
   before_action :authenticate_admin!,except: [:new,:create]
+  after_action :allow_iframe_requests
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
@@ -24,4 +25,8 @@ class Admin::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+  private
+    def allow_iframe_requests
+      response.headers.delete('X-Frame-Options')
+    end
 end

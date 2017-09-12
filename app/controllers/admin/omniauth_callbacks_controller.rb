@@ -1,4 +1,5 @@
 class Admin::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  after_action :allow_iframe_requests
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
 
@@ -25,4 +26,8 @@ class Admin::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def after_omniauth_failure_path_for(scope)
   #   super(scope)
   # end
+  private
+    def allow_iframe_requests
+      response.headers.delete('X-Frame-Options')
+    end
 end

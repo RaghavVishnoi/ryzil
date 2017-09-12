@@ -1,4 +1,5 @@
 class Admin::ConfirmationsController < Devise::ConfirmationsController
+  after_action :allow_iframe_requests
   # GET /resource/confirmation/new
   # def new
   #   super
@@ -25,4 +26,8 @@ class Admin::ConfirmationsController < Devise::ConfirmationsController
   # def after_confirmation_path_for(resource_name, resource)
   #   super(resource_name, resource)
   # end
+  private
+    def allow_iframe_requests
+      response.headers.delete('X-Frame-Options')
+    end
 end
