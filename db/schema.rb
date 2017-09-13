@@ -42,11 +42,6 @@ ActiveRecord::Schema.define(version: 20170910084201) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "homes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "product_images", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
